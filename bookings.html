@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .background {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url('bookingsBG.jpg') center center/cover no-repeat;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: black;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(201, 183, 183, 0.2);
+      margin-right: 20px;
+    }
+
+    .form-container h1 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color:whitesmoke;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      color: whitesmoke;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input, .form-group select, .form-group button {
+      width: 100%;
+      padding: 8px;
+      font-size: 0.9rem;
+      border: 1px solid coral;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      border-color: #007BFF;
+    }
+
+    .form-group button {
+      background-color: coral;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .form-group button:hover {
+      background-color: grey;
+    }
+
+    .accommodations {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .accommodation {
+      background-color: black;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .accommodation img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .accommodation .details {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .accommodation .details h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .accommodation .details p {
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .accommodation .details .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: coral;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="form-container">
+      <h1>Find rooms, villas, farmhouses to stay with your family</h1>
+      <form>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Anywhere">
+        </div>
+        <div class="form-group">
+          <label for="check-in">Check-in Date</label>
+          <input type="date" id="check-in" name="check-in">
+        </div>
+        <div class="form-group">
+          <label for="check-out">Check-out Date</label>
+          <input type="date" id="check-out" name="check-out">
+        </div>
+        <div class="form-group">
+          <label for="adults">Adults</label>
+          <select id="adults" name="adults">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="children">Children</label>
+          <select id="children" name="children">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="accommodations">
+      <div class="accommodation">
+        <img src="luxuryvilla.jpg" alt="Villa">
+        <div class="details">
+          <h3>Luxury Villa</h3>
+          <p>Perfect for a family getaway</p>
+          <p class="price">$3000 per night</p>
+        </div>
+      </div>
+
+      <div class="accommodation">
+        <img src="5 star hotel room.jpg" alt="Hotel Room">
+        <div class="details">
+          <h3>Deluxe Room</h3>
+          <p>Comfortable and spacious</p>
+          <p class="price">$2000 per night</p>
+        </div>
+      </div>
+
+      <div class="accommodation">
+        <img src="karjatmountain.jpg" alt="Hotel Room">
+        <div class="details">
+          <h3>Karjat Rental house</h3>
+          <p>Mountainside view Paradise</p>
+          <p class="price">$3,440 per night</p>
+        </div>
+      </div>
+
+      <div class="accommodation">
+        <img src="igatpuri.avif" alt="villa">
+        <div class="details">
+          <h3>Villa in Igatpuri</h3>
+          <p>Breathtaking Sahyadri mountainscapes of Igatpuri</p>
+          <p class="price">$6000 per night</p>
+        </div>
+      </div>
+
+      <div class="accommodation">
+        <img src="homeinpachgani.jpg" alt="villa">
+        <div class="details">
+          <h3>Panchgani penthouse</h3>
+          <p>Experience luxury in our 3BHK penthouse in Panchgani.</p>
+          <p class="price">$10,000 per night</p>
+        </div>
+      </div>
+
+
+      <div class="accommodation">
+        <img src="farmhouse.jpg" alt="Farmhouse">
+        <div class="details">
+          <h3>Farmhouse</h3>
+          <p>Relax in nature</p>
+          <p class="price">$2500 per night</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
